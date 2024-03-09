@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= title -%></title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <script src="/javascripts/sentences/index.js"></script>
+  </head>
+  <body>
+    <h1><%= title -%></h1>
+    <div>
+      <a href="/sentences/new" class="button">New Sentence</a>
+
+      <select id="order" name="order">
+        <option value="content">Alphabetical</option>
+        <option value="cats">Category</option>
+      </select>
+
+      <select id="direction" name="direction">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
+    <figure>
+      <table id="sentences-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Content</th>
+            <th>Categories</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="sentences-tbody"></tbody>
+      </table>
+    </figure>
+    <div id="pagination">
+      <a href="#" id="previous" class="button">Previous</a>
+      <a href="#" id="next" class="button">Next</a>
+    </div>
+  </body>
+</html>

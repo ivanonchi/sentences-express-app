@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="sentence_id" content="<%= id %>">
+    <title><%= title -%></title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <script src="/javascripts/sentences/edit.js"></script>
+  </head>
+  <body>
+    <h1><%= title -%></h1>
+    <form action="/api/sentences/<%= id %>" method="post">
+      <div class="form-group">
+        <!-- <input type="hidden" name="_method" value="put" /> -->
+        <label for="sentence">Sentence</label>
+        <input
+          type="text"
+          class="form-control"
+          id="content"
+          name="content"
+          placeholder="Enter sentence"
+        />
+      </div>
+      <div>
+        <!-- TODO: Make dynamic -->
+        <label for="categories">Choose categories:</label>
+        <select name="cats" id="cats" multiple>
+          <option value="responsibility">Responsibility</option>
+          <option value="benefit">Benefit</option>
+          <option value="education">Education</option>
+          <option value="experience">Experience</option>
+          <option value="soft">Soft</option>
+          <option value="tech">Tech</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/sentences" class="button">Back</a>
+    </form>
+  </body>
+</html>
