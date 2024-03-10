@@ -16,6 +16,12 @@ From the project root folder (so it can read google credentials file):
 
 (*) Please note that importing the 20,000 sentences file will exceed the free Firebase quota allocation.
 
+### Word ranking script
+
+From the project root folder (so it can read google credentials file):
+1. node scripts/word_ranking.js
+
+
 ### TODO
 
 - English translation with Yandex
