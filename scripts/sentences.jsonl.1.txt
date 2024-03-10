@@ -1,0 +1,1 @@
+{"text": "Sie sind offen, kommunikationsstark und teamorientiert.", "cats": {"responsibility": 0, "benefit": 0, "none": 0, "education": 0, "experience": 0, "soft": 1, "tech": 0}}

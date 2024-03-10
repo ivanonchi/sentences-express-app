@@ -4,7 +4,7 @@ const { getFirestore } = require("firebase-admin/firestore");
 const serviceAccount = require("../sentences-tb-firebase-adminsdk.json");
 
 initializeApp({
-  credential: applicationDefault(),
+  credential: applicationDefault()
 });
 
 const db = getFirestore();
