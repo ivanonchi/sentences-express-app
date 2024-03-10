@@ -17,7 +17,7 @@ fs.readFile(process.argv[2], 'utf8', (err, data) => {
     process.exit(-1);
   }
 
-  data.split('\n').forEach(async (sentence) => {
+  data.split('\n').forEach((sentence) => {
     if (!sentence) {
       console.log('Empty sentence');
       process.exit();
@@ -30,6 +30,9 @@ fs.readFile(process.argv[2], 'utf8', (err, data) => {
     sentenceObject.cats = catsArray.filter(([_key, value]) => value === 1).map(([key, _value]) => key);
     sentenceObject.content = sentenceJson.text;
 
-    await sentencesRef.add(sentenceObject);
+    console.log('Adding sentence:', sentenceObject);
+    sentencesRef.add(sentenceObject)
+      .then((docRef) => { console.log('Document written with ID:', docRef.id);})
+      .catch((error) => { console.error('Error adding document:', error);});
   });
 });

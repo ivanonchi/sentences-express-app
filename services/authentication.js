@@ -1,5 +1,5 @@
 const authenticateKey = (req, res, next) => {
-  const api_key = req.header("x-api-key");
+  const api_key = req.header("x-api-key") || req.query.api_key;
   if (api_key === process.env.API_KEY) {
     next();
   } else {

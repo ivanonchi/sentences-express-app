@@ -10,7 +10,7 @@
   </head>
   <body>
     <h1><%= title -%></h1>
-    <form action="/api/sentences" method="post">
+    <form action="/api/sentences?api_key=<%= api_key %>" method="post">
       <div class="form-group">
         <label for="sentence">Sentence (required)</label>
         <input

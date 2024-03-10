@@ -13,9 +13,8 @@
   </head>
   <body>
     <h1><%= title -%></h1>
-    <form action="/api/sentences/<%= id %>" method="post">
+    <form action="/api/sentences/<%= id %>?api_key=<%= api_key %>" method="post">
       <div class="form-group">
-        <!-- <input type="hidden" name="_method" value="put" /> -->
         <label for="sentence">Sentence</label>
         <input
           type="text"
