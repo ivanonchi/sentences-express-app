@@ -25,7 +25,10 @@ From the project root folder (so it can read google credentials file):
 ### TODO
 
 - English translation with Yandex
-- Count the top 100 words across all sentences
 - Bonus: API authentication
 - Bonus: Tests
 - Bonus: Host the app on Railway or a similar platform
+
+Other:
+
+- Proper error pages
