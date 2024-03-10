@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const id = document.querySelector('meta[name="sentence_id"]').content;
-  fetch(`/api/sentences/${id}`).then(response => response.json()).then(data => {
+  fetch(`/api/sentences/${id}`,  { headers: headers() }).then(response => response.json()).then(data => {
     fillData(data);
   });
 
   const destroy = document.getElementById('delete');
   destroy.addEventListener('click', (event) => {
     event.preventDefault();
-    fetch(`/api/sentences/${id}`, { method: 'DELETE' }).then(response => response.json()).then(data => {
+    fetch(`/api/sentences/${id}`, { method: 'DELETE', headers: headers() }).then(response => response.json()).then(data => {
       if (data.id === id) {
         window.location.href = '/sentences';
       }

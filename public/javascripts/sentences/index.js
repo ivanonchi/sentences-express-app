@@ -51,7 +51,7 @@ function generateRows(sentences) {
     const destroy = createLink("Delete", `#`);
     destroy.addEventListener("click", (event) => {
       event.preventDefault();
-      fetch(`/api/sentences/${sentence.id}`, { method: "DELETE" })
+      fetch(`/api/sentences/${sentence.id}`, { method: "DELETE", headers: headers() })
         .then((response) => response.json())
         .then((data) => {
           if (data.id === sentence.id) {
@@ -104,9 +104,10 @@ function fetchSentences(
   if (cursor) {
     url += `&cursor=${cursor}&page=${page}`;
   }
-  fetch(url)
+  fetch(url, { headers: headers() })
     .then((response) => response.json())
     .then((data) => {
       updatePagination(data);
     });
 }
+

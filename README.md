@@ -24,11 +24,11 @@ From the project root folder (so it can read google credentials file):
 
 ### TODO
 
-- English translation with Yandex
-- Bonus: API authentication
+- English translation with Yandex: *There is no free tier for individual developers.*
 - Bonus: Tests
 - Bonus: Host the app on Railway or a similar platform
 
 Other:
 
-- Proper error pages
+- Proper error handling and error pages
+- There is basic API authentication based on headers, but the api key is passed through the meta tag. Proper api key management is missing.

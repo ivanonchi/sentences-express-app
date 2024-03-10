@@ -1,8 +1,6 @@
 const { initializeApp, cert, applicationDefault } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
 
-const serviceAccount = require("../sentences-tb-firebase-adminsdk.json");
-
 initializeApp({
   credential: applicationDefault()
 });
